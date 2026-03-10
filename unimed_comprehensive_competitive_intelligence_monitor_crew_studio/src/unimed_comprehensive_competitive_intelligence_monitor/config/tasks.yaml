@@ -1,0 +1,106 @@
+---
+collect_brazilian_health_insurance_reviews:
+  description: 'Search and collect recent customer reviews and feedback about the
+    5 major Brazilian health insurance providers: Unimed, Bradesco Saúde, SulAmérica
+    Saúde, Amil, and Hapvida. Focus on gathering data from the last 24-72 hours when
+    available. Search for reviews containing keywords related to customer service,
+    reimbursement (reembolso), network coverage (rede credenciada), claim handling
+    (sinistros), and pricing (preços). Use Portuguese search terms and look for authentic
+    customer complaints and praise from Google Reviews, social media, and other public
+    review platforms.'
+  expected_output: 'A comprehensive collection of recent customer reviews and feedback
+    organized by insurance provider, including the review text, source, date when
+    possible, and key themes mentioned (customer service, reimbursement, coverage,
+    claims, pricing). Present the data in a structured format with clear categorization
+    by provider: Unimed, Bradesco Saúde, SulAmérica Saúde, Amil, and Hapvida.'
+  agent: brazilian_health_insurance_review_data_collector
+research_competitor_promotions_and_ans_data:
+  description: 'Pesquisar e coletar informações atualizadas sobre: 1) Promoções, campanhas
+    e ofertas especiais dos concorrentes (Bradesco Saúde, SulAmérica Saúde, Amil,
+    Hapvida) lançadas nos últimos 30 dias, incluindo descontos, benefícios adicionais
+    e novos produtos. 2) Dados oficiais da ANS sobre estas operadoras: indicadores
+    de qualidade (IDSS, taxa de reclamação), multas recentes, processos administrativos
+    e mudanças regulatórias. 3) Buscar no site oficial da ANS (ans.gov.br) por notícias,
+    resoluções e comunicados que possam afetar o setor. Use termos de busca em português
+    como "promoção plano saúde", "campanha Bradesco Saúde", "ANS multa operadoras",
+    "IDSS 2024".'
+  expected_output: 'Relatório estruturado contendo: 1) Seção "Promoções e Campanhas
+    dos Concorrentes" com detalhes das ofertas atuais de cada operadora (Bradesco
+    Saúde, SulAmérica, Amil, Hapvida), incluindo valores, benefícios e período de
+    validade. 2) Seção "Dados Regulatórios ANS" com indicadores de qualidade atualizados,
+    multas aplicadas nos últimos 30 dias e processos em andamento para cada concorrente.
+    3) Seção "Mudanças Regulatórias Recentes" com resoluções e normas da ANS que impactam
+    o setor. Todos os dados devem ser organizados por operadora para facilitar a comparação
+    com a Unimed.'
+  agent: market_intelligence_and_ans_regulatory_specialist
+analyze_customer_sentiment_patterns:
+  description: 'Perform comprehensive sentiment analysis on the collected customer
+    reviews for Unimed and its competitors (Bradesco Saúde, SulAmérica Saúde, Amil,
+    Hapvida). Classify each review as positive, negative, or neutral sentiment. Identify
+    and categorize recurring themes: customer service quality, reimbursement speed/issues,
+    network coverage satisfaction, claim handling efficiency, pricing concerns, and
+    overall satisfaction. Extract the top 5 complaints and top 5 positive comments
+    for each provider. Analyze language patterns and emotional intensity to understand
+    customer satisfaction levels, with special focus on Unimed''s position relative
+    to competitors.'
+  expected_output: 'A detailed sentiment analysis report containing: 1) Sentiment
+    classification (positive/negative/neutral percentages) for each provider with
+    Unimed highlighted, 2) Top 5 complaints per provider with frequency counts, 3)
+    Top 5 positive comments per provider with frequency counts, 4) Key themes analysis
+    by category (service, reimbursement, coverage, claims, pricing) comparing Unimed
+    vs competitors, 5) Emotional intensity scores and satisfaction indicators for
+    each provider with competitive positioning insights for Unimed.'
+  agent: customer_sentiment_analysis_specialist
+  context:
+  - collect_brazilian_health_insurance_reviews
+generate_unimed_competitive_intelligence_insights:
+  description: 'Conduct competitive analysis comparing Unimed against its main competitors
+    (Bradesco Saúde, SulAmérica Saúde, Amil, Hapvida) based on sentiment data. From
+    a Unimed portfolio manager perspective, identify: 1) Complaints that frequently
+    affect competitors but not Unimed, 2) Complaints that also impact Unimed, 3) Areas
+    where Unimed performs better than competitors, 4) Areas where competitors outperform
+    Unimed, 5) Emerging trends in customer feedback that could indicate market shifts
+    or opportunities for Unimed. Provide strategic recommendations for Unimed''s positioning
+    and potential risk mitigation.'
+  expected_output: 'A strategic competitive intelligence report from Unimed''s perspective
+    with: 1) Unimed vs competitors performance comparison across key dimensions, 2)
+    Competitive advantages and disadvantages clearly identified for Unimed, 3) Market
+    opportunities based on competitor weaknesses that Unimed can exploit, 4) Risk
+    areas where competitors excel and Unimed needs improvement, 5) Emerging customer
+    sentiment trends affecting the health insurance market, 6) Strategic recommendations
+    for Unimed''s market positioning and product improvement, 7) Early warning indicators
+    for potential market threats to Unimed''s position.'
+  agent: unimed_competitive_intelligence_analyst
+  context:
+  - analyze_customer_sentiment_patterns
+create_and_send_daily_executive_report:
+  description: 'Compilar todos os insights em um relatório executivo diário abrangente
+    e enviá-lo automaticamente por email para giovannafantacini@gmail.com com o assunto
+    "Relatório Diário de Sentiment do Mercado – Unimed vs Concorrentes". Estruturar
+    o relatório com: 1) Resumo Executivo do cenário de sentiment dos clientes na perspectiva
+    da Unimed, 2) Seção Principais Reclamações (Concorrentes vs Unimed), 3) Seção
+    Principais Feedbacks Positivos destacando os pontos fortes da Unimed, 4) NOVA
+    SEÇÃO: Promoções e Campanhas dos Concorrentes com ofertas atuais que podem impactar
+    a competitividade da Unimed, 5) NOVA SEÇÃO: Indicadores ANS e Dados Regulatórios
+    mostrando multas, processos e indicadores de qualidade dos concorrentes vs Unimed,
+    6) Seção Principais Tendências Identificadas no mercado de saúde suplementar,
+    7) Insights Estratégicos com recomendações acionáveis para a gestão de portfólio
+    da Unimed. Formatar para consumo executivo com bullet points claros, linguagem
+    concisa e foco estratégico especificamente para a equipe de gestão da Unimed.
+    Após criar o conteúdo do relatório, usar a ferramenta Gmail para enviar o email
+    automaticamente.'
+  expected_output: 'Email enviado com sucesso para giovannafantacini@gmail.com contendo
+    um relatório executivo formatado profissionalmente com: Resumo executivo na perspectiva
+    competitiva da Unimed, análise comparativa de reclamações (concorrentes vs Unimed),
+    análise de feedback positivo destacando a posição de mercado da Unimed, NOVA SEÇÃO
+    com promoções e campanhas atuais dos concorrentes, NOVA SEÇÃO com dados regulatórios
+    da ANS (multas, indicadores de qualidade, processos) comparando concorrentes com
+    Unimed, tendências de mercado afetando saúde suplementar, e insights estratégicos
+    com recomendações acionáveis para gestão de portfólio da Unimed. O email deve
+    ser enviado com a linha de assunto correta e o relatório deve ser formatado com
+    seções claras e bullet points para leitura executiva rápida pela equipe de gestão
+    da Unimed.'
+  agent: unimed_executive_report_writer
+  context:
+  - generate_unimed_competitive_intelligence_insights
+  - research_competitor_promotions_and_ans_data
