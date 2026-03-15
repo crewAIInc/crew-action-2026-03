@@ -88,37 +88,15 @@ Antes de executar, crie um arquivo `.env` na raiz do projeto com as seguintes ch
 
 ### Como executar
 
-Existem três formas comuns de rodar o projeto:
+Use o comando padrão do Crew para executar o projeto:
 
-- Usando o entry point (depois de instalado com `pip`):
-
-  unimed_comprehensive_competitive_intelligence_monitor run
-
-- Usando o módulo Python:
-
-  python -m unimed_comprehensive_competitive_intelligence_monitor.main run
-
-- Executando o script diretamente na árvore de código:
-
-  python src/unimed_comprehensive_competitive_intelligence_monitor/main.py run
+crew run
 
 ### Exemplos de uso
 
 - Rodar a execução completa (gera e envia o relatório):
 
-  python -m unimed_comprehensive_competitive_intelligence_monitor.main run
-
-- Rodar testes (ex.: 1 iteração, modelo de OpenAI de exemplo):
-
-  python -m unimed_comprehensive_competitive_intelligence_monitor.main test 1 gpt-4o-mini
-
-- Treinar o crew (ex.: 100 iterações e salvar em `train_output.json`):
-
-  python -m unimed_comprehensive_competitive_intelligence_monitor.main train 100 train_output.json
-
-- Reproduzir execução a partir de um `task_id`:
-
-  python -m unimed_comprehensive_competitive_intelligence_monitor.main replay <TASK_ID>
+  crew run
 
 ### Dependências
 
