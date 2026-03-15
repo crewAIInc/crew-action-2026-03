@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import sys
-from crew import UnimedComprehensiveCompetitiveIntelligenceMonitorCrew
+from .crew import UnimedComprehensiveCompetitiveIntelligenceMonitorCrew
 
 # This main file is intended to be a way for your to run your
 # crew locally, so refrain from adding unnecessary logic into this file.
