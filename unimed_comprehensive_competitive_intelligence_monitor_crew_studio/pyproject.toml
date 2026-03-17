@@ -1,0 +1,25 @@
+[project]
+name = "unimed_comprehensive_competitive_intelligence_monitor"
+version = "0.1.0"
+description = "unimed_comprehensive_competitive_intelligence_monitor using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "crewai-tools>=1.10.1",
+    "crewai[litellm,tools]==1.10.1",
+]
+
+[project.scripts]
+unimed_comprehensive_competitive_intelligence_monitor = "unimed_comprehensive_competitive_intelligence_monitor.main:run"
+run_crew = "unimed_comprehensive_competitive_intelligence_monitor.main:run"
+train = "unimed_comprehensive_competitive_intelligence_monitor.main:train"
+replay = "unimed_comprehensive_competitive_intelligence_monitor.main:replay"
+test = "unimed_comprehensive_competitive_intelligence_monitor.main:test"
+run_with_trigger = "unimed_comprehensive_competitive_intelligence_monitor.main:run_with_trigger"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
